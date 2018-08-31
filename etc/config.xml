@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Shopigo. All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <advanced>
+            <modules_disable_output>
+                <Shopigo_CatalogInfiniteScroll>1</Shopigo_CatalogInfiniteScroll>
+            </modules_disable_output>
+        </advanced>
+        <shopigo_cataloginfinitescroll>
+            <general>
+                <enabled>0</enabled>
+                <prime_cache>1</prime_cache>
+                <scroll_mode>auto_up_to</scroll_mode>
+                <scroll_page_limit>3</scroll_page_limit>
+                <continue_btn_text>Load more items...</continue_btn_text>
+                <use_custom_loader>0</use_custom_loader>
+                <loader_image_src/>
+                <show_text_loader>1</show_text_loader>
+                <text_loader>Loading items...</text_loader>
+                <ajax_request_timeout>10000</ajax_request_timeout>
+                <scroll_to_top_enabled>1</scroll_to_top_enabled>
+                <scroll_to_top_distance>400</scroll_to_top_distance>
+                <scroll_to_top_easing>swing</scroll_to_top_easing>
+                <scroll_to_top_duration>1200</scroll_to_top_duration>
+                <scroll_to_top_offset>20</scroll_to_top_offset>
+                <scroll_to_top_btn_color/>
+                <scroll_to_top_btn_color_hover/>
+            </general>
+        </shopigo_cataloginfinitescroll>
+    </default>
+</config>
