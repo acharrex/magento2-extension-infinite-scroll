@@ -9,7 +9,7 @@ The Infinite Scroll extension replaces the default paging system available in al
 When the customer scrolls down a page, the following page is instantaneously loaded.
 Thanks to this extension, customers could discover the entire catalog by just scrolling down!
 
-This extension offers 4 scrolling modes and a wide panel of features.
+This extension offers 4 scrolling modes (automatic, automatic up to X pages - then manual, automatic each X pages and manual) and a wide panel of features.
 
 ## Requirements
 
