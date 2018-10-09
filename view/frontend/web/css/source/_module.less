@@ -1,0 +1,98 @@
+/**
+ * Copyright © Shopigo. All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ */
+ 
+
+//
+//    Common
+//--------------------------------------
+
+& when (@media-common = true) {
+
+    // Product Lists
+    .page-products {
+        .products.wrapper {
+            margin-bottom: 0;
+            margin-top: 0;
+            
+            .product-items {
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+            
+            &:first-child {
+                margin-top: @indent__l;
+                
+                .product-items {
+                    margin-top: @indent__l;
+                }
+            }
+            
+            &:last-child {
+                margin-bottom: @indent__l;
+                
+                .product-items {
+                    margin-bottom: @indent__l;
+                }
+            }
+        }
+    }
+    
+    #infinite-scroll-loader {
+        margin-top: @indent__l / 2;
+        text-align: center;
+        
+        .loader-container {
+            margin: 0 auto;
+        }
+    }
+    
+    #infinite-scroll-continue-btn {
+        margin-top: @indent__l / 2;
+        text-align: center;
+        
+        .button-container {
+            margin: 0 auto;
+        }
+    }
+        
+    #infinite-scroll-to-top-btn {
+        .lib-css(border-radius, 50%);
+        .lib-css(opacity, 0.65);
+    
+        background-color: @color-gray52;
+        background-image: url(../Shopigo_CatalogInfiniteScroll/images/scroll-to-top.png);
+        background-position: 50% 48%;
+        background-repeat: no-repeat;
+        bottom: 30px;
+        display: none;
+        height: 50px;
+        position: fixed;
+        right: 30px;
+        text-indent: -9999px;
+        z-index: 1;
+        width: 50px;
+        
+        &:hover {
+            background-color: @color-gray19;
+        }
+    
+        &:focus {
+            outline: none;
+        }
+    }
+
+}
+
+//
+//    Tablet and mobile
+//--------------------------------------
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  
+    #infinite-scroll-to-top-btn {
+        bottom: 15px;
+        right: 15px;
+    }
+
+}

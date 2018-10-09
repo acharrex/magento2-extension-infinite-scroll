@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Shopigo. All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="product_list_infinitescroll"/>
+    <body/>
+</page>

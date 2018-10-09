@@ -1,0 +1,25 @@
+{
+  "name": "shopigo/magento2-extension-infinite-scroll",
+  "description": "Infinite Scroll extension for Magento 2",
+  "require": {
+    "php": "7.0.2|7.0.4|~7.0.6|~7.1.0",
+    "magento/module-catalog": "102.0.*",
+    "magento/module-layered-navigation": "100.2.*",
+    "shopigo/magento2-extension-ajax-listing": "1.0.*",
+    "magento/framework": "101.0.*"
+  },
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Shopigo\\CatalogInfiniteScroll\\": ""
+    }
+  }
+}

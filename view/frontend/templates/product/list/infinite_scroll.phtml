@@ -1,0 +1,42 @@
+<?php
+/**
+ * Copyright © Shopigo. All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<?php
+/**
+ * Product infinite scroll block
+ *
+ * @var $block \Shopigo\CatalogInfiniteScroll\Block\ProductList\InfiniteScroll
+ */
+// use Shopigo\CatalogInfiniteScroll\Block\ProductList\InfiniteScroll;
+?>
+<div id="infinite-scroll-container"></div>
+<script type="text/x-magento-init">
+    {
+        "#infinite-scroll-container": {
+            "productListCatalogInfiniteScroll": {
+                "primeCache": <?= /* @escapeNotVerified */ $block->getPrimeCache() ?>,
+                "scrollMode": "<?= $block->getScrollMode() ?>",
+                "scrollPageLimit": <?= /* @escapeNotVerified */ $block->getScrollPageLimit() ?>,
+                "continueBtnText": "<?= $block->escapeJs($block->getContinueBtnText(), '"') ?>",
+                "loaderImageSrc": "<?= $block->getLoaderImageSrc() ?>",
+                "showTextLoader": <?= /* @escapeNotVerified */ $block->getShowTextLoader() ?>,
+                "textLoader": "<?= $block->escapeJs($block->getTextLoader(), '"') ?>",
+                "ajaxRequestTimeout": <?= /* @escapeNotVerified */ $block->getAjaxRequestTimeout() ?>,
+                "scrollToTopEnabled": <?= /* @escapeNotVerified */ $block->getIsScrollToTopEnabled() ?>,
+                "scrollToTopDistance": <?= /* @escapeNotVerified */ $block->getScrollToTopDistance() ?>,
+                "scrollToTopEasing": "<?= $block->getScrollToTopEasing() ?>",
+                "scrollToTopDuration": <?= /* @escapeNotVerified */ $block->getScrollToTopDuration() ?>,
+                "scrollToTopOffset": <?= /* @escapeNotVerified */ $block->getScrollToTopOffset() ?>,
+                "scrollToTopBtnColor": "<?= $block->getScrollToTopBtnColor() ?>",
+                "scrollToTopBtnColorHover": "<?= $block->getScrollToTopBtnColorOnHover() ?>",
+                "currentPageUrl": "<?= $block->getCurrentPageUrl() ?>",
+                "nextPageUrl": "<?= $block->getNextPageUrl() ?>"
+            }
+        }
+    }
+</script>

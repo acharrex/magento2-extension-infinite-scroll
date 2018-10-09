@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Shopigo. All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="shopigo" translate="label" sortOrder="500" class="shopigo-extensions">
+            <label>Shopigo Extensions</label>
+        </tab>
+        <section id="shopigo_cataloginfinitescroll" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Infinite Scroll</label>
+            <tab>shopigo</tab>
+            <resource>Shopigo_CatalogInfiniteScroll::config</resource>
+            <group id="general" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enabled" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Infinite Scroll</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="prime_cache" translate="label tooltip" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Preload Next Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <tooltip>Preload next page to reduce the loading time when the user scrolls down the page. Very useful to warm the Full Page Cache.</tooltip>
+                </field>
+                <field id="scroll_mode" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Scroll Mode</label>
+                    <source_model>Shopigo\CatalogInfiniteScroll\Model\Config\Source\ScrollMode</source_model>
+                </field>
+                <field id="scroll_page_limit" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Page Limit (X value)</label>
+                    <depends>
+                        <field id="scroll_mode" separator=",">auto_up_to,auto_each</field>
+                    </depends>
+                </field>
+                <field id="continue_btn_text" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Continue Button Text</label>
+                    <depends>
+                        <field id="scroll_mode" separator=",">auto_up_to,auto_each,manual</field>
+                    </depends>
+                </field>
+                <field id="use_custom_loader" translate="label" type="select" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Use Custom Loader Image</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="loader_image_src" translate="label comment" type="image" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Loader Image</label>
+                    <backend_model>Shopigo\CatalogInfiniteScroll\Model\Config\Backend\Image\Loader</backend_model>
+                    <base_url type="media" scope_info="1">shopigo/catalog_infinite_scroll/loader</base_url>
+                    <comment><![CDATA[Allowed file types: JPG, JPEG, GIF, PNG, SVG<br/>Tip: you can easily create your own AJAX loader from <a href="http://ajaxload.info/" target="_blank">here</a>]]></comment>
+                    <depends>
+                        <field id="use_custom_loader">1</field>
+                    </depends>
+                </field>
+                <field id="show_text_loader" translate="label tooltip" type="select" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Show Text Loader</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <tooltip>Display a text just after the loader image</tooltip>
+                </field>
+                <field id="text_loader" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Text Loader</label>
+                    <depends>
+                        <field id="show_text_loader">1</field>
+                    </depends>
+                </field>
+                <field id="ajax_request_timeout" translate="label comment" type="text" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>AJAX Request Timeout</label>
+                    <comment>In milliseconds, by default 10000 (= 10 seconds)</comment>
+                </field>
+                <field id="scroll_to_top_enabled" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Scroll-to-top Button</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="scroll_to_top_distance" translate="label tooltip comment" type="text" sortOrder="55" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Scroll-to-top Distance</label>
+                    <tooltip>Distance from top before showing element</tooltip>
+                    <comment>In pixels, by default 400</comment>
+                    <depends>
+                        <field id="scroll_to_top_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="scroll_to_top_easing" translate="label tooltip comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Scroll-to-top Easing</label>
+                    <source_model>Shopigo\CatalogInfiniteScroll\Model\Config\Source\Easing</source_model>
+                    <tooltip>Animation used when the scroll-to-top button is clicked</tooltip>
+                    <comment><![CDATA[For more information about jQuery easings, go to the <a href="https://api.jqueryui.com/easings/" target="_blank">official jQuery UI documentation</a>]]></comment>
+                    <depends>
+                        <field id="scroll_to_top_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="scroll_to_top_duration" translate="label comment" type="text" sortOrder="65" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Scroll-to-top Easing Duration</label>
+                    <comment>In milliseconds, by default 1200 (= 1.2 second)</comment>
+                    <depends>
+                        <field id="scroll_to_top_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="scroll_to_top_offset" translate="label tooltip comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Scroll-to-top Offset</label>
+                    <tooltip>Offset relative to the products wrapper</tooltip>
+                    <comment>In pixels, by default 20</comment>
+                    <depends>
+                        <field id="scroll_to_top_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="scroll_to_top_btn_color" translate="label comment" type="text" sortOrder="75" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Scroll-to-top Button Color</label>
+                    <comment>In hexadecimal (e.g. #858585). Leave empty to use CSS stylesheet.</comment>
+                    <depends>
+                        <field id="scroll_to_top_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="scroll_to_top_btn_color_hover" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Scroll-to-top Button Color On Hover</label>
+                    <comment>In hexadecimal (e.g. #303030). Leave empty to use CSS stylesheet.</comment>
+                    <depends>
+                        <field id="scroll_to_top_enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
