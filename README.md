@@ -1,6 +1,6 @@
-[![Shopigo](https://www.shopigo.ch/wp-content/uploads/2018/08/github-shopigo-logo.png)](https://www.shopigo.ch)
+![Shopigo](https://i.imgur.com/7Ctkn7X.png)
 
-# Magento 2 Infinite Scroll extension by [Shopigo](https://www.shopigo.ch)
+# Magento 2 Infinite Scroll extension by Shopigo
 
 On large catalogs, pagination can make navigation between tens of pages a nightmare for customers.
 
@@ -13,9 +13,11 @@ This extension offers 4 scrolling modes (automatic, automatic up to X pages - th
 
 ## Requirements
 
-Magento Open Source Edition 2.2.x.
+Magento Open Source Edition 2.2 or 2.3
 
 ## Installation
+
+**Important**: this extension requires the [AJAX Listing extension by Shopigo](https://github.com/acharrex/magento2-extension-ajax-listing) (to install and enable)
 
 ## Method 1 - Installing via composer
 
@@ -24,9 +26,7 @@ Magento Open Source Edition 2.2.x.
 
 ## Method 2 - Installing using archive
 
-**Important**: this extension requires the [AJAX Listing extension by Shopigo](https://github.com/shopigo/magento2-extension-ajax-listing) (to install and enable)
-
-- Download [ZIP Archive](https://github.com/shopigo/magento2-extension-infinite-scroll/archive/master.zip)
+- Download [ZIP Archive](https://github.com/acharrex/magento2-extension-infinite-scroll/archive/master.zip)
 - Switch to your Magento project root
 - Create folder `app/code/Shopigo/CatalogInfiniteScroll`
 - Extract zip into path
@@ -53,29 +53,32 @@ php bin/magento setup:static-content:deploy
 
 ### Scroll-to-top button
 
-![Scroll-to-top button](https://www.shopigo.ch/wp-content/uploads/2018/10/github-extension-infinite-scroll-plp-scroll-to-top.jpg)
+![Scroll-to-top button](https://i.imgur.com/XaSDwtQ.jpg)
 
 ### Loading of the next page
 
-![Loading of the next page](https://www.shopigo.ch/wp-content/uploads/2018/10/github-extension-infinite-scroll-plp-loading.jpg)
+![Loading of the next page](https://i.imgur.com/9WNnTfm.jpg)
 
 ### Load more items button
 
-![Load more items button](https://www.shopigo.ch/wp-content/uploads/2018/10/github-extension-infinite-scroll-plp-continue-btn.jpg)
+![Load more items button](https://i.imgur.com/LGBXCK3.jpg)
 
 ### When an error occurs with the AJAX request
 
-![When an error occurs with the AJAX request](https://www.shopigo.ch/wp-content/uploads/2018/10/github-extension-infinite-scroll-plp-loading-error.jpg)
+![When an error occurs with the AJAX request](https://i.imgur.com/o1ISsVn.jpg)
 
 ### Extension settings
 
-![Extension settings](https://www.shopigo.ch/wp-content/uploads/2018/10/github-extension-infinite-scroll-settings.jpg)
+![Extension settings](https://i.imgur.com/zrSVO8A.jpg)
 
 ## Support
 
-If you have any issues, open a bug report in GitHub's [issue tracker](https://github.com/shopigo/magento2-extension-infinite-scroll/issues).
+If you have any issues, open a bug report in GitHub's [issue tracker](https://github.com/acharrex/magento2-extension-infinite-scroll/issues).
 
 ## Change logs
+
+**Version 1.0.1** (2019-02-07)
+- Fix composer.json for Magento 2.3
 
 **Version 1.0.0** (2018-10-09)
 - First version
@@ -84,5 +87,4 @@ If you have any issues, open a bug report in GitHub's [issue tracker](https://gi
 
 The code is licensed under [Open Software License ("OSL") v. 3.0](http://opensource.org/licenses/osl-3.0.php).
 
-<br/>Enjoy!<br/>
-[Shopigo](https://www.shopigo.ch)
+<br/>Enjoy!
